@@ -15,7 +15,7 @@
         $(document).ready(function(){
             $("#img").slideDown("slow");
             $("#divLogo").delay(2300).animate({top: '-680px'}, 500);
-            $(".btn").click(function(){
+            $("a").click(function(){
                 var href=$(this).prop('href');
                 $(".row").toggle("slide", function(){
                     window.location=href;
@@ -25,8 +25,13 @@
         });
     </script>
 	<style>
+		h1 {
+			color: white;
+			font-weight: bold;
+		}
+		
 		body {
-			background: url("/static/images/PimpYourMentor.png");
+			background: #ff00cc;
 		}
 		
 		.abs {
@@ -38,7 +43,7 @@
 		}
 		
 		#divBack {
-			background-color: pink;
+			background-color: #ff00cc;
 		}
 		
 		#divLogo {
@@ -50,14 +55,27 @@
 			display: none;
 		}
 		
+		.img-opacity {
+			opacity: 0.7;
+			margin-top: 60px;
+		}
+		
+		.img-opacity:hover {
+			opacity: 1;
+			border: solid #00ccff 10px;
+			transition: 0.2s;
+		}
+		
 		#choice1 {
 			height: 680px;
-			background-color: yellow;
+			background-color: #ffff00;
+			text-align: center;
 		}
 		
 		#choice2 {
 			height: 680px;
-			background-color: lightblue;
+			background-color: #ff00cc;
+			text-align: center;
 		}
 	</style>
 </head>
@@ -66,10 +84,12 @@
 	<div class="container-fluid">
 		<div class="abs row" id="divBack">
 			<div class="col-sm-6" id="choice1">
-				<a class="btn btn-primary" href="/pimp_immi"> <span class="glyphicon glyphicon-chevron-right"></span>Immi</a>
+				<a href="{{url_for('render_pimp_immi')}}"><img src="/static/images/körimmi.jpg" class="img-circle img-opacity" alt=""></a>
+				<h1 style="color:#ff00cc">Choose Me!</h1>
 			</div>
 			<div class="col-sm-6" id="choice2">
-				<a class="btn btn-primary" href="/pimp_laci">Laci</a>
+				<a href="{{url_for('render_pimp_laci')}}"><img src="/static/images/körlaci.png" class="img-circle img-opacity" alt=""></a>
+				<h1>Choose Me!</h1>
 			</div>
 		</div>
 		<div class="abs" id="divLogo">
