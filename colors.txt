@@ -1,0 +1,3 @@
+pink: ff00cc
+yellow: ffff00
+blue: 00ccff

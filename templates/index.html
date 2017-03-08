@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Pimp Your Mentor</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='custom.css' ) }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script> 
+        $(document).ready(function(){
+            $("#img").slideDown("slow");
+            $("#divLogo").delay(2300).animate({top: '-680px'}, 500);
+            $(".btn").click(function(){
+                var href=$(this).prop('href');
+                $(".row").toggle("slide", function(){
+                    window.location=href;
+                });
+                return false;
+            });
+        });
+    </script>
+	<style>
+		.abs {
+			height: 680px;
+			width: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		
+		#divBack {
+			background-color: pink;
+		}
+		
+		#divLogo {
+			background-color: #ff00cc;
+			text-align: center;
+		}
+		
+		#img {
+			display: none;
+		}
+		
+		#choice1 {
+			height: 680px;
+			background-color: yellow;
+		}
+		
+		#choice2 {
+			height: 680px;
+			background-color: lightblue;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="abs row" id="divBack">
+			<div class="col-sm-6" id="choice1">
+				<a class="btn btn-primary" href="/pimp_immi"> <span class="glyphicon glyphicon-chevron-right"></span>Immi</a>
+			</div>
+			<div class="col-sm-6" id="choice2">
+				<a class="btn btn-primary" href="/pimp_laci">Laci</a>
+			</div>
+		</div>
+		<div class="abs" id="divLogo">
+			<img id="img" src="/static/images/PimpYourMentor.png" alt="PimpYourMentor" height="500px">
+		</div>
+	</div>
+</body>
+
+</html>
