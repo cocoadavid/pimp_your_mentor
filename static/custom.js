@@ -78,5 +78,5 @@ $("#thuglife").click(function () {
     var audio = new Audio("/static/audio/thuglife.mp3");
     audio.play();
     $("#divEyes").hide();
-    $("#glasses").fadeIn(500).animate({ left: '378px', top: '40px' }, 7500).delay(2000).fadeOut(500).animate({ top: '-40px' }, 10);
+    $("#glasses").animate({ top: "-100px" }, 50).fadeIn(500).animate({ top: '100px' }, 7500).delay(2000).fadeOut(500);
 });

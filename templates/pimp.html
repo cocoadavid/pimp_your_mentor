@@ -14,22 +14,47 @@
 	<script src="/static/html2canvas.js"></script>
 	<style>
 		body {
+			background: url("/static/images/PimpYourMentor.png");
+		}
+		
+		.row {
 			display: none;
 		}
 		
 		#divHeader {
+			text-align: center;
 			height: 100px;
-			background-color: #ff00cc;
+			background-color: #292928;
+			padding-top: 30px;
+		}
+		
+		#divHeader h1 {
+			color: white;
+			font-weight: bold;
+			line-height: 5px;
 		}
 		
 		#divTools {
 			height: 680px;
 			background-color: #ff00cc;
+			padding-top: 30px;
+			text-align: center;
+		}
+		
+		#divTools h2 {
+			color: white;
+			font-weight: bold;
+		}
+		
+		#divAccs {
+			height: 120px;
+			background-color: white;
+			border-radius: 20px;
 		}
 		
 		#divMentor {
 			height: 680px;
-			background-color: yellow;
+			background: url("/static/images/background.jpg");
 			text-align: center;
 		}
 		
@@ -54,15 +79,33 @@
 			background-color: #00ccff;
 		}
 		
+		#save {
+			background-color: #ffff00;
+		}
+		
 		#divHead {}
 		
 		#glasses {
-			display: none;
 			position: absolute;
-			top: 0;
-			right: 0;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
 			width: 20%;
-			height: 60%;
+			display: none;
+		}
+		
+		#dollar {
+			position: absolute;
+			left: -35%;
+			top: 45%;
+			transform: translate(0%, 0%);
+		}
+		
+		#cap {
+			position: absolute;
+			left: -33%;
+			top: 35%;
+			transform: translate(0%, 0%);
 		}
 		
 		#divEyes {
@@ -85,44 +128,58 @@
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<div id="divHeader"></div>
+			<div id="divHeader">
+				<h1>Pimp your mentor! Use the toolbar on the left. You can even drag elements!</h1>
+			</div>
 			<div class="col-sm-3" id="divTools">
 				<p>
-					<button class="btn btn-default btn-center">HEAD</span></button>
+					<button class="btn btn-default btn-center">HEAD</button>
 					<button id="backH" class="btn btn-default btn-left"><span class="glyphicon glyphicon-triangle-left"></span></button>
 					<button id="nextH" class="btn btn-default btn-right"><span class="glyphicon glyphicon-triangle-right"></span></button>
 				</p>
 				<p>
-					<button id="showEyes" class="btn btn-default btn-center">SHOW/HIDE EYES</span></button>
+					<button id="showEyes" class="btn btn-default btn-center">SHOW/HIDE EYES</button>
 					<button id="backE" class="btn btn-default btn-left"><span class="glyphicon glyphicon-triangle-left"></span></button>
 					<button id="nextE" class="btn btn-default btn-right"><span class="glyphicon glyphicon-triangle-right"></span></button>
 				</p>
 				<p>
-					<button class="btn btn-default btn-center">BODY</span></button>
+					<button class="btn btn-default btn-center">BODY</button>
 					<button id="backB" class="btn btn-default btn-left"><span class="glyphicon glyphicon-triangle-left"></span></button>
 					<button id="nextB" class="btn btn-default btn-right"><span class="glyphicon glyphicon-triangle-right"></span></button>
 				</p>
-				<p>
-					<button id="thuglife" class="btn btn-default btn-block">DEAL WITH IT</button>
-				</p>
+				<br>
+				<button id="thuglife" class="btn btn-default btn-block"><span class="glyphicon glyphicon-sunglasses"></span> DEAL WITH IT</button>
+				<h2>Accessories</h2>
+				<div id="divAccs">
+				</div>
+				<br>
+				<button id="save" class="btn btn-default btn-block"><span class="glyphicon glyphicon-floppy-disk"></span> SAVE</button>
 			</div>
 			<div class="col-sm-9" id="divMentor">
 				<div id="divHead">
 					<img id="imgHead" class="img-mentor" src="{{choice}}" alt="">
-					<img id="glasses" class="img-mentor" src="/static/images/glasses.png" alt="" width="300px" , height="300px">
+					<div id="glasses">
+						<img src="/static/images/glasses.png" alt="" width="60%">
+					</div>
 				</div>
 				<div id="divEyes">
 					<img id="imgEyes" class="img-mentor" src="/static/images/eyes1.png" alt="">
 				</div>
 				<div id="divBody">
 					<img id="imgBody" class="img-mentor" src="/static/images/body1.png" alt="">
+					<div id="dollar">
+						<img src="/static/images/dollar.png" alt="" width="30%">
+					</div>
+					<div id="cap">
+						<img src="/static/images/fullcap.png" alt="" width="35%">
+					</div>
 				</div>
 			</div>
 		</div>
 		<script type="text/javascript" src="/static/custom.js"></script>
 		<script>
         $(document).ready(function(){
-            $("body").show("slide");
+            $(".row").show("slide");
 			// SAVE 
 			var downloadURL = function(url, name) {
 				var link = document.createElement("a");
@@ -131,11 +188,11 @@
 				link.click();
           	};
 			var $divId = $("#divMentor");
-				$('#divBody').click(function(){
+				$('#save').click(function(){
 					html2canvas($divId, {
 					onrendered: function (canvas) {
 							var img = canvas.toDataURL("image/png");
-							//window.open(img);
+							window.open(img);
 							downloadURL(img, "test_image.png");
 						},
 					background: "#fff"
@@ -146,6 +203,8 @@
 			$( function() {
 				$( "#divHead" ).draggable();
 				$( "#divEyes" ).draggable();
+				$( "#dollar" ).draggable();
+				$( "#cap" ).draggable();
 			} );
 			// END DRAGGABLE
         });
