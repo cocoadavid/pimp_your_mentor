@@ -11,73 +11,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-	<script> 
-        $(document).ready(function(){
-            $("#img").slideDown("slow");
-            $("#divLogo").delay(2300).animate({top: '-680px'}, 500);
-            $("a").click(function(){
-                var href=$(this).prop('href');
-                $(".row").toggle("slide", function(){
-                    window.location=href;
-                });
-                return false;
-            });
-        });
-    </script>
-	<style>
-		h1 {
-			color: white;
-			font-weight: bold;
-		}
-		
-		body {
-			background: #ff00cc;
-		}
-		
-		.abs {
-			height: 680px;
-			width: 100%;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-		}
-		
-		#divBack {
-			background-color: #ff00cc;
-		}
-		
-		#divLogo {
-			background-color: #ff00cc;
-			text-align: center;
-		}
-		
-		#img {
-			display: none;
-		}
-		
-		.img-opacity {
-			opacity: 0.7;
-			margin-top: 60px;
-		}
-		
-		.img-opacity:hover {
-			opacity: 1;
-			border: solid #00ccff 10px;
-			transition: 0.2s;
-		}
-		
-		#choice1 {
-			height: 680px;
-			background-color: #ffff00;
-			text-align: center;
-		}
-		
-		#choice2 {
-			height: 680px;
-			background-color: #ff00cc;
-			text-align: center;
-		}
-	</style>
 </head>
 
 <body>
@@ -96,6 +29,19 @@
 			<img id="img" src="/static/images/PimpYourMentor.png" alt="PimpYourMentor" height="500px">
 		</div>
 	</div>
+	<script> 
+        $(document).ready(function(){
+            $("#img").slideDown("slow");
+            $("#divLogo").delay(2300).animate({top: '-680px'}, 500);
+            $("a").click(function(){
+                var href=$(this).prop('href');
+                $(".row").toggle("slide", function(){
+                    window.location=href;
+                });
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>

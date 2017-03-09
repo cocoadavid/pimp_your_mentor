@@ -1,0 +1,161 @@
+body {
+			background: #ff00cc;
+		}
+
+/* ----- INDEX.HTML ----- */
+h1 {
+			color: white;
+			font-weight: bold;
+}
+
+.abs {
+    height: 680px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#divBack {
+    background-color: #ff00cc;
+}
+
+#divLogo {
+    background-color: #ff00cc;
+    text-align: center;
+}
+
+#img {
+    display: none;
+}
+
+.img-opacity {
+    opacity: 0.7;
+    margin-top: 60px;
+}
+
+.img-opacity:hover {
+    opacity: 1;
+    border: solid #00ccff 10px;
+    transition: 0.2s;
+}
+
+#choice1 {
+    height: 680px;
+    background-color: #ffff00;
+    text-align: center;
+}
+
+#choice2 {
+    height: 680px;
+    background-color: #ff00cc;
+    text-align: center;
+}
+
+/* ----- PIMP.HTML ----- */
+
+#hiddenDiv {
+    display: none;
+}
+
+#divHeader {
+    text-align: center;
+    height: 100px;
+    background-color: #292928;
+    padding-top: 30px;
+}
+
+#divHeader h1 {
+    color: white;
+    font-weight: bold;
+    line-height: 5px;
+}
+
+#divTools {
+    height: 680px;
+    background-color: #ff00cc;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#divTools h2 {
+    color: white;
+    font-weight: bold;
+}
+
+#divAccs {
+    height: 120px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#divMentor {
+    height: 680px;
+    background: url("/static/images/background.jpg");
+    text-align: center;
+}
+
+.btn-center {
+    width: 50%;
+    color: #fff;
+    background-color: #00ccff;
+}
+
+.btn-right {
+    float: right;
+    width: 25%;
+}
+
+.btn-left {
+    float: left;
+    width: 25%;
+}
+
+#thuglife {
+    color: #fff;
+    background-color: #00ccff;
+}
+
+#save {
+    background-color: #ffff00;
+}
+
+#divHead {}
+
+#glasses {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    display: none;
+}
+
+#dollar {
+    position: absolute;
+    left: -35%;
+    top: 45%;
+    transform: translate(0%, 0%);
+}
+
+#cap {
+    position: absolute;
+    left: -33%;
+    top: 35%;
+    transform: translate(0%, 0%);
+}
+
+#divEyes {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#divBody {}
+
+.img-mentor {
+    width: 25%;
+}
