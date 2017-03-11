@@ -8,6 +8,18 @@ $(document).ready(function () {
         $("#divEyes").fadeOut('500').delay(10000).fadeIn(500);
         $("#glasses").animate({ top: "-200" }, 5).fadeIn(500).animate({ top: position.top }, 7500).delay(2000).fadeOut(500);
     });
+    // INDIAN
+    $("#indian").click(function () {
+        var audio = new Audio("/static/audio/indian.mp3");
+        audio.play();
+        for (var i = 0; i < 8; i++) {
+            $("#divHead").animate({ left: "18" }, 650).animate({ left: "-18" }, 650);
+            $("#cap").animate({ left: "18" }, 650).animate({ left: "-18" }, 650);
+        };
+        $("#divHead").animate({ left: "0" }, 200);
+        $("#cap").animate({ left: "0" }, 200);
+        return false;
+    });
     //FUNCTION changeImage
     function changeImage(listImg, imgId, buttonNext, buttonBack, startFrom = 0) {
         var idxImg = startFrom;
