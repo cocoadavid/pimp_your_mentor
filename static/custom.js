@@ -18,6 +18,9 @@ $(document).ready(function () {
         var audio = new Audio("/static/audio/darthvader.mp3");
         audio.play();
     });
+    $("#buttonEyes").click(function () {
+        $("#divEyes").effect("shake");
+    });
     //THUGLIFE
     $("#thuglife").click(function () {
         var audio = new Audio("/static/audio/thuglife.mp3");
