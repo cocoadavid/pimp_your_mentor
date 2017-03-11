@@ -32,6 +32,10 @@ h1 {
 #img {
     display: none;
 }
+.animate-img{
+    transition: 4s;
+    transform: rotateY(360deg);
+}
 
 .img-opacity {
     opacity: 0.7;

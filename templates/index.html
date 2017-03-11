@@ -29,10 +29,16 @@
 			<img id="img" src="/static/images/PimpYourMentor.png" alt="PimpYourMentor" height="500px">
 		</div>
 	</div>
+	<script src="/static/custom.js"></script>
 	<script> 
         $(document).ready(function(){
-            $("#img").slideDown("slow");
-            $("#divLogo").delay(2300).animate({top: '-680px'}, 500);
+			var audio = new Audio("/static/audio/intro.mp3");
+        	audio.play();
+            $("#img").fadeIn(800);
+			setTimeout(function(){
+				$("#img").addClass( "animate-img" );
+			}, 100);
+            $("#divLogo").delay(4500).animate({top: '-680px'}, 500);
             $("a").click(function(){
                 var href=$(this).prop('href');
                 $(".row").toggle("slide", function(){

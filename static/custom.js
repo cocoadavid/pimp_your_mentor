@@ -1,4 +1,18 @@
 $(document).ready(function () {
+    // MOUSEENTER
+    $(".img-opacity").mouseenter(function () {
+        var audio = new Audio("/static/audio/effect.mp3");
+        audio.play();
+    });
+    // BUTTONCLICK
+    $(".btn-left, .btn-right").click(function () {
+        var audio = new Audio("/static/audio/pop.mp3");
+        audio.play();
+    });
+    $("#save").click(function () {
+        var audio = new Audio("/static/audio/save.mp3");
+        audio.play();
+    });
     //THUGLIFE
     $("#thuglife").click(function () {
         var audio = new Audio("/static/audio/thuglife.mp3");
