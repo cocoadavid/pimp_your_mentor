@@ -7,8 +7,10 @@ $(document).ready(function () {
     $("#thuglife").click(function () {
         var audio = new Audio("/static/audio/thuglife.mp3");
         audio.play();
+        var position = $("#imgHead").position();
+        $("#glasses").css({ "left": position.left, "top": position.top });
         $("#divEyes").hide();
-        $("#glasses").animate({ top: "-100px" }, 50).fadeIn(500).animate({ top: '100px' }, 7500).delay(2000).fadeOut(500);
+        $("#glasses").animate({ top: "-200" }, 5).fadeIn(500).animate({ top: position.top }, 7500).delay(2000).fadeOut(500);
     });
     //FUNCTION changeImage
     function changeImage(listImg, imgId, buttonNext, buttonBack, startFrom = 0) {

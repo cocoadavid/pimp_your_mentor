@@ -62,13 +62,12 @@ h1 {
     text-align: center;
     height: 100px;
     background-color: #292928;
-    padding-top: 30px;
+    padding-top: 5px;
 }
 
 #divHeader h1 {
     color: white;
     font-weight: bold;
-    line-height: 5px;
 }
 
 #divTools {
@@ -124,11 +123,9 @@ h1 {
 
 #glasses {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     width: 20%;
     display: none;
+    transform: translate(20px, 55px);
 }
 
 #dollar {
