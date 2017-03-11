@@ -5,7 +5,6 @@
 	<title>Pimp Your Mentor</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.min.css">
 	<link rel="stylesheet" href="{{ url_for('static', filename='custom.css' ) }}">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -14,19 +13,19 @@
 </head>
 
 <body>
-	<div class="container-fluid">
+	<div class="container non-responsive">
 		<div id="hiddenDiv" class="row">
 			<div id="divHeader">
-				<h1>Pimp your mentor! Use the toolbar on the left. You can even drag elements!</h1>
+				<h1>Pimp your mentor! Use the toolbar on the left, drag the accessories.</h1>
 			</div>
-			<div class="col-sm-3" id="divTools">
+			<div class="col-xs-3" id="divTools">
 				<p>
 					<button class="btn btn-default btn-center">HEAD</button>
 					<button id="backH" class="btn btn-default btn-left"><span class="glyphicon glyphicon-triangle-left"></span></button>
 					<button id="nextH" class="btn btn-default btn-right"><span class="glyphicon glyphicon-triangle-right"></span></button>
 				</p>
 				<p>
-					<button id="showEyes" class="btn btn-default btn-center">SHOW/HIDE EYES</button>
+					<button id="showEyes" class="btn btn-default btn-center">EYES</button>
 					<button id="backE" class="btn btn-default btn-left"><span class="glyphicon glyphicon-triangle-left"></span></button>
 					<button id="nextE" class="btn btn-default btn-right"><span class="glyphicon glyphicon-triangle-right"></span></button>
 				</p>
@@ -47,25 +46,24 @@
 					<span class="glyphicon glyphicon-home"></span> Home
 				</a>
 			</div>
-			<div class="col-sm-9" id="divMentor">
+			<div class="col-xs-9" id="divMentor">
 				<div id="divHead">
 					<img id="imgHead" class="img-mentor" src="{{choice}}" alt="">
-					<div id="cap">
-						<img id="imgCap" src="/static/images/fullcap.png" alt="" width="35%">
+					<div id="divEyes">
+						<img id="imgEyes" class="img-mentor" src="/static/images/eyes0.png" alt="">
 					</div>
 					<div id="glasses">
 						<img src="/static/images/glasses.png" alt="" width="60%">
 					</div>
 				</div>
-				<div id="divEyes">
-					<img id="imgEyes" class="img-mentor" src="/static/images/eyes1.png" alt="">
-				</div>
 				<div id="divBody">
 					<img id="imgBody" class="img-mentor" src="/static/images/body1.png" alt="">
-					<div id="dollar">
-						<img src="/static/images/dollar.png" alt="" width="30%">
+					<div id="cap">
+						<img id="imgCap" src="/static/images/fullcap.png" alt="" width="35%">
 					</div>
-
+					<div id="dollar">
+						<img id="imgDollar" src="/static/images/dollar.png" alt="" width="30%">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -95,9 +93,8 @@
 			// END SAVE
 			// DRAGGABLE
 			$( function() {
-				$( "#imgHead" ).draggable();
-				$( "#divEyes" ).draggable();
-				$( "#dollar" ).draggable();
+				$( "#divHead" ).draggable();
+				$( "#imgDollar" ).draggable();
 				$( "#imgCap" ).draggable();
 			} );
 			// END DRAGGABLE

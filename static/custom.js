@@ -1,15 +1,11 @@
 $(document).ready(function () {
-    // SHOW HIDE EYES
-    $("#showEyes").click(function () {
-        $("#divEyes").toggle();
-    });
     //THUGLIFE
     $("#thuglife").click(function () {
         var audio = new Audio("/static/audio/thuglife.mp3");
         audio.play();
         var position = $("#imgHead").position();
         $("#glasses").css({ "left": position.left, "top": position.top });
-        $("#divEyes").hide();
+        $("#divEyes").fadeOut('500').delay(10000).fadeIn(500);
         $("#glasses").animate({ top: "-200" }, 5).fadeIn(500).animate({ top: position.top }, 7500).delay(2000).fadeOut(500);
     });
     //FUNCTION changeImage
@@ -45,9 +41,10 @@ $(document).ready(function () {
     listBody[2] = "/static/images/body3.png";
     listBody[3] = "/static/images/body4.png";
     var listEyes = [];
-    listEyes[0] = "/static/images/eyes1.png";
-    listEyes[1] = "/static/images/eyes2.png";
-    listEyes[2] = "/static/images/eyes3.png";
+    listEyes[0] = "/static/images/eyes0.png";
+    listEyes[1] = "/static/images/eyes1.png";
+    listEyes[2] = "/static/images/eyes2.png";
+    listEyes[3] = "/static/images/eyes3.png";
     // CALL changeImage FUNCTIONS
     if ($("#imgHead").attr("src") === listHead[0]) {
         var startIdx = 0;

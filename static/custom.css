@@ -2,6 +2,10 @@ body {
 			background: #ff00cc;
 		}
 
+.non-responsive {
+    width: 1290px !important;
+}
+
 /* ----- INDEX.HTML ----- */
 h1 {
 			color: white;
@@ -71,7 +75,7 @@ h1 {
 }
 
 #divTools {
-    height: 680px;
+    height: 577px;
     background-color: #ff00cc;
     padding-top: 30px;
     text-align: center;
@@ -89,7 +93,7 @@ h1 {
 }
 
 #divMentor {
-    height: 680px;
+    height: 577px;
     background: url("/static/images/background.jpg");
     text-align: center;
 }
@@ -119,7 +123,9 @@ h1 {
     background-color: #ffff00;
 }
 
-#divHead {}
+#imgHead {
+    transform:translate(-3px, 20px);
+}
 
 #glasses {
     position: absolute;
@@ -130,9 +136,9 @@ h1 {
 
 #dollar {
     position: absolute;
-    left: -35%;
-    top: 45%;
-    transform: translate(0%, 0%);
+    left: 0;
+    top: 0;
+    transform: translate(-350px, 300px);
 }
 
 #cap {
@@ -143,15 +149,16 @@ h1 {
 }
 
 #divEyes {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    /*height: 100%;
+    width: 100%;*/
 }
-
-#divBody {}
+#imgEyes {
+    width: 250px;
+    transform: translate(342px, 15px);
+}
 
 .img-mentor {
     width: 25%;
