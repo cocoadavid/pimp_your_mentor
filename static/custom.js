@@ -21,6 +21,9 @@ $(document).ready(function () {
     $("#buttonEyes").click(function () {
         $("#divEyes").effect("shake");
     });
+    $("#superman").click(function () {
+        $("#imgBody").prop("src", "/static/images/super.png");
+    });
     //THUGLIFE
     $("#thuglife").click(function () {
         var audio = new Audio("/static/audio/thuglife.mp3");
