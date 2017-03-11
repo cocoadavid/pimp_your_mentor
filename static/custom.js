@@ -13,6 +13,11 @@ $(document).ready(function () {
         var audio = new Audio("/static/audio/save.mp3");
         audio.play();
     });
+    $("#starwars").click(function () {
+        $("#imgHead").prop("src", "/static/images/vader2.png");
+        var audio = new Audio("/static/audio/darthvader.mp3");
+        audio.play();
+    });
     //THUGLIFE
     $("#thuglife").click(function () {
         var audio = new Audio("/static/audio/thuglife.mp3");
