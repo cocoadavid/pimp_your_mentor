@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#thuglife").click(function () {
         var audio = new Audio("/static/audio/thuglife.mp3");
         audio.play();
-        var position = $("#imgHead").position();
+        var position = $("#divHead").position();
         $("#glasses").css({ "left": position.left, "top": position.top });
         $("#divEyes").fadeOut('500').delay(10000).fadeIn(500);
         $("#glasses").animate({ top: "-200" }, 5).fadeIn(500).animate({ top: position.top }, 7500).delay(2000).fadeOut(500);
